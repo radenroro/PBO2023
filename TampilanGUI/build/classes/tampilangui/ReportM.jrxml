@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cef42709-31d4-4285-99df-dc3fe8b4cd8a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="98"/>
+	<property name="ireport.y" value="15"/>
+	<queryString language="SQL">
+		<![CDATA[Select * From Makeup;]]>
+	</queryString>
+	<field name="Produk" class="java.lang.String"/>
+	<field name="Harga" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="299" y="21" width="233" height="22" forecolor="#FF33FF" uuid="a30e1797-3bc2-4555-90e0-947f8e0bd4b7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOKO MAKEUP RARA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="317" y="5" width="171" height="30" forecolor="#FF99FF" uuid="d06ed3bf-8d38-4e75-9482-b0149c628d9c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="22" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DATA MAKEUP]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="223" y="46" width="94" height="22" forecolor="#CC99FF" uuid="8998739c-600b-42af-af68-bbac369048b8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Produk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="46" width="94" height="23" forecolor="#CC99FF" uuid="bcd63f60-fb1c-42fe-aaf3-3c6ace258db3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="95" splitType="Stretch">
+			<textField>
+				<reportElement x="223" y="32" width="141" height="22" forecolor="#FF33FF" uuid="d909ec1d-deb7-4fd6-a12a-eed896901f62"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Produk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="34" width="141" height="20" forecolor="#FF33FF" uuid="522d1e62-9a6e-42b9-bdab-ca34c4b3232b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Harga}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
