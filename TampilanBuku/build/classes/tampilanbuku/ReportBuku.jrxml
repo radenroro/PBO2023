@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c0eaf367-ab53-489e-be3f-fe44ea66c916">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from Laporan_Buku;]]>
+	</queryString>
+	<field name="ISBN" class="java.lang.String"/>
+	<field name="judulBuku" class="java.lang.String"/>
+	<field name="tahunTerbit" class="java.lang.Integer"/>
+	<field name="penerbit" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="182" y="12" width="246" height="23" forecolor="#3300CC" backcolor="#333333" uuid="a683a544-e58f-479c-ba47-aa9322fe080a"/>
+				<textElement>
+					<font fontName="Arial Black" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOKU BUKU GRAMEDIA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="236" y="0" width="134" height="20" forecolor="#6633FF" backcolor="#FFFF33" uuid="b4f4e11f-dc79-495e-a188-15f67f63ff8b"/>
+				<textElement>
+					<font fontName="Arial Black" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[LAPORAN BUKU]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="16" y="25" width="100" height="20" forecolor="#6600FF" uuid="b1361f10-c1b3-4348-9e28-399b8ee455de"/>
+				<textElement>
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<text><![CDATA[ISBN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="25" width="100" height="20" forecolor="#3300FF" uuid="ec1f7782-881e-4eb5-b0a3-f550725175fb"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Judul Buku]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="25" width="100" height="20" forecolor="#3300FF" uuid="c9ee381d-a9d8-4e29-8222-4e9489e9c34c"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Tahun Terbit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="428" y="25" width="100" height="20" forecolor="#3300FF" uuid="f805dfa5-3879-4d38-a84b-0213ce49f218"/>
+				<textElement>
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Penerbit]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="23" width="114" height="27" forecolor="#0033CC" uuid="fa9ffff1-ec6b-432f-9451-30e309e52fa2"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ISBN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="23" width="141" height="22" forecolor="#0033CC" uuid="719c58cb-fec9-4834-ba75-dc61cad0b24a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{judulBuku}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="23" width="127" height="22" forecolor="#0033CC" uuid="88b1bff9-796b-4465-b8fc-49eff1006f66"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tahunTerbit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="428" y="23" width="141" height="22" forecolor="#0033CC" uuid="577381a2-be91-4038-8be3-0a1ede304a03"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{penerbit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
